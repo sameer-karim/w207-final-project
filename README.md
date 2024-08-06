@@ -4,24 +4,24 @@
 ### Table of Contents:
 - Introduction & Relevance
 - Setup and Installation
-- Data Preparation
+- Data
 - Model Training and Evaluation
-- Hyperparameter Tuning
 - Conclusion
 
-### Introduction & Relavance:
+### Introduction & Relevance:
 In this machine learning project, we aim to predict the prices of used cars using various features found in a Kaggle dataset (link below). As far as financial planning goes - both sellers and buyers benefit from knowing the value of a used car. Platforms like Kelly Blue Book have been made popular for this very reason. Sellers can look to capture maximum value for their vehicle and buyers can look to acquire a new car at a reasonable price. Depreciation trends and understanding how cars either lose or gain value over time is also valuable to both buyers and sellers. A car’s value tends to exponentially decay, especially for luxury cars and buyers may look to purchase these types of cars immediately after the biggest drop in value has occurred. On the other hand some cars actually increase in value over time and sellers may look to hold on to them for as long as possible. Insurance companies also need to know the value of cars so that they can set premiums and so that they do not take on too much risk in the form of claim payouts. Banks and financial institutions that issue loans need to be able to predict a car’s value so that they can determine loan amounts and prevent people from defaulting on loans. All of these insights are reasons why accurately predicting a car’s value is important. 
 
-### Setup:
+### Setup & Installation:
 Clone the repo and run the predict.py script with a designated file path for the data you would like to use to predict.
 
-### Data Preparation and Feature Engineering:
+### Data:
 
 #### Data Introduction:
 - Source: https://www.kaggle.com/datasets/adityadesai13/used-car-dataset-ford-and-mercedes/data?select=vw.csv
 
 This data was derived from scraping used car listings. After concatening all of the csv files into one dataframe, added a brand column that keeps track of the manufacturer of the vehicle as well as EDA to visualize any outliers or trends. We found that there were over 9000 rows of missing data for the 'mpg' and 'tax' categories - multiple imputation strategies were implemented to remedy this. We tried dropping columns, imputing with the median, and imputing with a KMeans cluster average. 
 
+#### Feature Engineering
 Our categorical data encoding strategies included label, frequency, ordinal, and one-hot encoding. We settled on one-hot encoding because it made the most sense for the types of categorical features in the dataset. In regards to numerical scaling – we first tried log transforming features that were right-skewed or not normal. We also tried Z-Scaling using StandardScaler. We found that performance was negatively impacted by scaling so we ended up leaving the numerical features unscaled. 
 
 ### Model Training and Evaluation:
