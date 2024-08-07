@@ -1,6 +1,8 @@
-###Data Preprocessing: 
+***Data Preprocessing: 
 python data_preprocessing.py
+
 ###Train Model:
 model_training.py preprocessed_data.csv
+
 ###Use test data without price column to predict price
 predict.py test_data.csv pretrained_model.joblib predictions.csv
