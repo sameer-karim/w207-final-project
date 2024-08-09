@@ -1,3 +1,4 @@
+![Model]Pipeline/Step 0.JPG
 1. Data Preprocessing: This code will clean the raw data and generate the preprocessed data ready to load to the model for train
 python data_preprocessing.py
 By running this code you will get a preprocessed_full_data_ready_for_model.csv. Besides you will also generate the raw test_data_X and test_data_Y which is used in Step3: model prediction and evaluation
