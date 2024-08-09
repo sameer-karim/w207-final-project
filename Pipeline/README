@@ -1,4 +1,5 @@
-![alt text](https://github.com/sameer-karim/w207-final-project/blob/7466ece89192c3ff84b88cabd007eac2929e4f7d/Pipeline/Step%200.JPG)
+![Sin titulo](https://github.com/sameer-karim/w207-final-project/blob/7466ece89192c3ff84b88cabd007eac2929e4f7d/Pipeline/Step%200.JPG)
+
 1. Data Preprocessing: This code will clean the raw data and generate the preprocessed data ready to load to the model for train
 python data_preprocessing.py
 By running this code you will get a preprocessed_full_data_ready_for_model.csv. Besides you will also generate the raw test_data_X and test_data_Y which is used in Step3: model prediction and evaluation
