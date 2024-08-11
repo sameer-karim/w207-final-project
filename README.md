@@ -45,31 +45,8 @@ The XGBoost model was our highest achiever reaching a 6.5% MAPE value on the tes
 The model utilized the 'gbtree' booster, with the 'reg' objective to minimize squared error for regression. We set an initial learning rate (eta) of 0.1, a maximum tree depth (max_depth) of 20, and both subsample and colsample_bytree values set to 0.8 to ensure robust and diverse trees.
 
 ### Performance Evaluation
-https://github.com/sameer-karim/w207-final-project/blob/ad31a071bae0bef233cb3c16d72ea85c9cc5be56/Performance%20Evaluation.JPG
-
-### Conclusion
-
-Table: Mean Absolute Percentage Error of Various Models with and without K-fold Cross-Validation (k=5) for Training and Testing Phases. Here is the summary, analysis, and results of this evaluation:
-
-Summary of Results:
-Base Model:
- 
-MAPE Without Cross-Validation: 27.84% / 27.78%
-No value for K-fold Cross-Validation.
-Linear Regression:
- 
-MAPE Without Cross-Validation: 9.60% / 9.64%
-K-fold Cross-Validation: 9.59% / 9.63%
-XGBoost:
- 
-MAPE Without Cross-Validation: 4.27% / 6.55%
-MAPE (Train/Test) With K-fold Cross-Validation: 4.36% / 6.29%
-Random Forest:
-
-MAPE (Train/Test) Without Cross-Validation: 4.79% / 7.28%
-MAPE (Train/Test) With K-fold Cross-Validation: 4.90% / 7.50%
-Analysis:
-Performance Across Models:
+Mean Absolute Percentage Error of Various Models with and without K-fold Cross-Validation (k=5) for Training and Testing Phases. Here is the summary, analysis, and results of this evaluation
+！[image] (https://github.com/sameer-karim/w207-final-project/blob/ad31a071bae0bef233cb3c16d72ea85c9cc5be56/Performance%20Evaluation.JPG)
 
 XGBoost does have the lowest values of MAPE, so essentially, it is the best among the models tested, especially on the training data. There is, however, a slight increase in MAPE when going from training to testing, which might indicate some extent of overfitting.
 Random Forest also goes well, with a bit higher MAPE values compared to XGBoost but still much better than Linear Regression and the Base model. Linear Regression has higher MAPE values, thus it might not be that good as these two: XGBoost and Random Forest in this particular task. However, it is still pretty impressive compared to the Baseline model. The worst one is the Baseline model with the largest MAPE values.
@@ -81,5 +58,5 @@ Generalization Gap:
 
 The generalization gap—the difference between train and test MAPE—is the smallest for Linear Regression, so it generalizes relatively well but with higher error. For XGBoost and Random Forest, this gap is more significant, much more without cross-validation, thus putting forward a tradeoff between the model complexity and the risk of overfitting.
 Overall, XGBoost has the best performance, but careful interpretation shall be made because of the generalization gap. Random Forest comes in at second place, and Linear Regression does better than the baseline but is less competitive compared to the tree-based ones.
-
+### Conclusion
 Despite our diverse approaches in modeling our data, we arrived at similar metrics. Each model performs exceptionally well on unseen data, particularly the XGBoost model (6.5% MAPE). In hindsight, this aligns with our other methods of modeling, as XGBoost combines aspects of efficiency, regularization, and flexibility to create an effective implemention of gradient boosting. Further research on ensemble models, feature engineering, and other hyperparameter tuning methods could improve the performance of this model, however given our time and resource constraints, we are satisfied with the results and hope you learn from our findings! 
