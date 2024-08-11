@@ -49,9 +49,10 @@ Mean Absolute Percentage Error of Various Models with and without K-fold Cross-V
 
 ![Performance Evaluation](https://github.com/sameer-karim/w207-final-project/blob/ad31a071bae0bef233cb3c16d72ea85c9cc5be56/Performance%20Evaluation.JPG)
 
-From the performance summary, it can be seen that XGBoost does have the lowest values of MAPE, so essentially, it is the best among the models tested, especially on the training data. There is, however, a slight increase in MAPE when going from training to testing, which might indicate some extent of overfitting.
-Random Forest also goes well, with a bit higher MAPE values compared to XGBoost but still much better than Linear Regression and the Base model. Linear Regression has higher MAPE values, thus it might not be that good as these two: XGBoost and Random Forest in this particular task. However, it is still pretty impressive compared to the Baseline model. 
-The worst one is the Baseline model with the largest MAPE values.
+From the performance summary, it can be seen that XGBoost does have the lowest values of MAPE, so essentially, it is the best among the models tested with a slight increase in MAPE when going from training to testing, which might indicate some extent of overfitting.
+
+Random Forest also goes well, with a bit higher MAPE values compared to XGBoost but still much better than Linear Regression and the Base model. Linear Regression has higher MAPE values, thus it might not be that good as these two: XGBoost and Random Forest in this particular task. However, it is still pretty impressive compared to the Baseline model. All the three models beat the baseline performance significantly.
+
 K-fold cross-validation resulted in a small increase of MAPE on training data but a slight decrease in the case of XGBoost and an increase in the case of Random Forest for testing data. This proves that cross-validation slightly stabilizes the performance of the model and may provide better generalization under certain circumstances.
 The gapdifference between train and test MAPE—is the smallest for Linear Regression, so it generalizes relatively well but with higher error. For XGBoost and Random Forest, this gap is more significant, much more without cross-validation, thus putting forward a tradeoff between the model complexity and the risk of overfitting.
 ### Conclusion
