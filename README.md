@@ -44,6 +44,9 @@ Our Random Forest model utilized a parameter grid and RandomizedSearchCV to expl
 The XGBoost model was our highest achiever reaching a 6.5% MAPE value on the test data.
 The model utilized the 'gbtree' booster, with the 'reg' objective to minimize squared error for regression. We set an initial learning rate (eta) of 0.1, a maximum tree depth (max_depth) of 20, and both subsample and colsample_bytree values set to 0.8 to ensure robust and diverse trees.
 
+### Performance Evaluation
+https://github.com/sameer-karim/w207-final-project/blob/ad31a071bae0bef233cb3c16d72ea85c9cc5be56/Performance%20Evaluation.JPG
+
 ### Conclusion
 
 Table: Mean Absolute Percentage Error of Various Models with and without K-fold Cross-Validation (k=5) for Training and Testing Phases. Here is the summary, analysis, and results of this evaluation:
