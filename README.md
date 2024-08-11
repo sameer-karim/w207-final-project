@@ -46,7 +46,7 @@ The model utilized the 'gbtree' booster, with the 'reg' objective to minimize sq
 
 ### Performance Evaluation
 Mean Absolute Percentage Error of Various Models with and without K-fold Cross-Validation (k=5) for Training and Testing Phases. Here is the summary, analysis, and results of this evaluation
-！[image] (https://github.com/sameer-karim/w207-final-project/blob/ad31a071bae0bef233cb3c16d72ea85c9cc5be56/Performance%20Evaluation.JPG)
+！[image](https://github.com/sameer-karim/w207-final-project/blob/ad31a071bae0bef233cb3c16d72ea85c9cc5be56/Performance%20Evaluation.JPG)
 
 XGBoost does have the lowest values of MAPE, so essentially, it is the best among the models tested, especially on the training data. There is, however, a slight increase in MAPE when going from training to testing, which might indicate some extent of overfitting.
 Random Forest also goes well, with a bit higher MAPE values compared to XGBoost but still much better than Linear Regression and the Base model. Linear Regression has higher MAPE values, thus it might not be that good as these two: XGBoost and Random Forest in this particular task. However, it is still pretty impressive compared to the Baseline model. The worst one is the Baseline model with the largest MAPE values.
