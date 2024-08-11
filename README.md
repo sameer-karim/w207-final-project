@@ -36,10 +36,10 @@ Because each team member wanted practice in building machine learning models, ou
 
 In our Linear Regression model, we used np.log(price) to ensure that predictions are positive. The results are quite straightforward, we fit the model on our cleaned test data and returned the following results:
 
-- MAPE: 9.58%
+- MAPE: 9.64%
 - R<sup>2</sup>: 92.92%
 
-Our Random Forest model utilized a parameter grid and RandomizedSearchCV to explore different combinations of hyperparameters. RandomizedSearchCV was used over GridSearchCV to emphasize efficiency and iterability. The best estimator from the search was selected and trained on the training set. The model performed well, achieving a 7.39% MAPE value on the test set. We iterated on the model by creating a more focused parameter grid around the best parameters obtained from the first run, and running GridSearchCV, a more exhaustive search. Results yielded a 7.33% MAPE value - a marginal improvement. Further investigation would be needed to find where the reason lies; this may be due to the model complexity or the bias-variance tradeoff. Another further step could involve creating new features, such as interaction terms, polynomial features, or domain-specific features. 
+Our Random Forest model utilized a parameter grid and RandomizedSearchCV to explore different combinations of hyperparameters. RandomizedSearchCV was used over GridSearchCV to emphasize efficiency and iterability. The best estimator from the search was selected and trained on the training set. The model performed well, achieving a 7.39% MAPE value on the test set. We iterated on the model by creating a more focused parameter grid around the best parameters obtained from the first run, and running GridSearchCV, a more exhaustive search. Results yielded a 7.28% MAPE value - a marginal improvement. Further investigation would be needed to find where the reason lies; this may be due to the model complexity or the bias-variance tradeoff. Another further step could involve creating new features, such as interaction terms, polynomial features, or domain-specific features. 
 
 The XGBoost model was our highest achiever reaching a 6.5% MAPE value on the test data.
 The model utilized the 'gbtree' booster, with the 'reg' objective to minimize squared error for regression. We set an initial learning rate (eta) of 0.1, a maximum tree depth (max_depth) of 20, and both subsample and colsample_bytree values set to 0.8 to ensure robust and diverse trees.
