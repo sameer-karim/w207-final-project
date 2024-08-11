@@ -45,18 +45,14 @@ The XGBoost model was our highest achiever reaching a 6.5% MAPE value on the tes
 The model utilized the 'gbtree' booster, with the 'reg' objective to minimize squared error for regression. We set an initial learning rate (eta) of 0.1, a maximum tree depth (max_depth) of 20, and both subsample and colsample_bytree values set to 0.8 to ensure robust and diverse trees.
 
 ### Performance Evaluation
-Mean Absolute Percentage Error of Various Models with and without K-fold Cross-Validation (k=5) for Training and Testing Phases. Here is the summary, analysis, and results of this evaluation
-！[image](https://github.com/sameer-karim/w207-final-project/blob/ad31a071bae0bef233cb3c16d72ea85c9cc5be56/Performance%20Evaluation.JPG)
+Mean Absolute Percentage Error of Various Models with and without K-fold Cross-Validation (k=5) for Training and Testing Phases. 
 
-XGBoost does have the lowest values of MAPE, so essentially, it is the best among the models tested, especially on the training data. There is, however, a slight increase in MAPE when going from training to testing, which might indicate some extent of overfitting.
-Random Forest also goes well, with a bit higher MAPE values compared to XGBoost but still much better than Linear Regression and the Base model. Linear Regression has higher MAPE values, thus it might not be that good as these two: XGBoost and Random Forest in this particular task. However, it is still pretty impressive compared to the Baseline model. The worst one is the Baseline model with the largest MAPE values.
-Effect of K-fold Cross Validation:
+![Performance Evaluation](https://github.com/sameer-karim/w207-final-project/blob/ad31a071bae0bef233cb3c16d72ea85c9cc5be56/Performance%20Evaluation.JPG)
 
-In linear regression, the impact of K-fold cross-validation is very less; with and without cross-validation, the MAPE values are very close to each other.
-In the case of XGBoost and random forest, K-fold cross-validation resulted in a small increase of MAPE on training data but a slight decrease in the case of XGBoost and an increase in the case of Random Forest for testing data. This proves that cross-validation slightly stabilizes the performance of the model and may provide better generalization under certain circumstances.
-Generalization Gap:
-
-The generalization gap—the difference between train and test MAPE—is the smallest for Linear Regression, so it generalizes relatively well but with higher error. For XGBoost and Random Forest, this gap is more significant, much more without cross-validation, thus putting forward a tradeoff between the model complexity and the risk of overfitting.
-Overall, XGBoost has the best performance, but careful interpretation shall be made because of the generalization gap. Random Forest comes in at second place, and Linear Regression does better than the baseline but is less competitive compared to the tree-based ones.
+From the performance summary, it can be seen that XGBoost does have the lowest values of MAPE, so essentially, it is the best among the models tested, especially on the training data. There is, however, a slight increase in MAPE when going from training to testing, which might indicate some extent of overfitting.
+Random Forest also goes well, with a bit higher MAPE values compared to XGBoost but still much better than Linear Regression and the Base model. Linear Regression has higher MAPE values, thus it might not be that good as these two: XGBoost and Random Forest in this particular task. However, it is still pretty impressive compared to the Baseline model. 
+The worst one is the Baseline model with the largest MAPE values.
+K-fold cross-validation resulted in a small increase of MAPE on training data but a slight decrease in the case of XGBoost and an increase in the case of Random Forest for testing data. This proves that cross-validation slightly stabilizes the performance of the model and may provide better generalization under certain circumstances.
+The gapdifference between train and test MAPE—is the smallest for Linear Regression, so it generalizes relatively well but with higher error. For XGBoost and Random Forest, this gap is more significant, much more without cross-validation, thus putting forward a tradeoff between the model complexity and the risk of overfitting.
 ### Conclusion
 Despite our diverse approaches in modeling our data, we arrived at similar metrics. Each model performs exceptionally well on unseen data, particularly the XGBoost model (6.5% MAPE). In hindsight, this aligns with our other methods of modeling, as XGBoost combines aspects of efficiency, regularization, and flexibility to create an effective implemention of gradient boosting. Further research on ensemble models, feature engineering, and other hyperparameter tuning methods could improve the performance of this model, however given our time and resource constraints, we are satisfied with the results and hope you learn from our findings! 
